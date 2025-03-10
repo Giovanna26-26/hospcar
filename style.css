@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    height: 600px;
+}
+h4{
+    font-size: 25px; 
+    font-family: sans-serif;
+    font-weight: 100;
+    text-align: right;
+    text-align: left; /* Garante alinhamento do texto */
+    align-self: flex-start; 
+    margin-left: 130px; /* Adiciona um espaçamento da borda esquerda */
+    margin-bottom: 50px;
+    
+}
+#carro, #formulario {
+    flex: 1; 
+    height: 600px;
+}
+
+#formulario {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255); 
+    flex-direction: column;
+   
+}
+#email, #senha{
+    margin: 20px;
+    border-radius: 10px;
+    width: 300px;
+    height: 50px;
+    background-color: rgb(255, 102, 0);
+    padding-left: 35px;
+    box-shadow: rgb(0, 0, 0) 1px 1px 1px ;
+
+    
+}
+#email::placeholder, #senha::placeholder {
+    color: rgba(255, 255, 255, 0.8); /* Branco com transparência para legibilidade */
+    font-weight: 300; /* Pode deixar um pouco mais fino se preferir */
+    font-size: 14px; 
+    font-family: sans-serif;
+}
