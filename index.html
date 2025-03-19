@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HospCar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="caixa-principal">
+        <div class="caixa-formulario">
+            <div class="caixa-botoes">
+                <button class="botao-alternar" onclick="mostrarLogin()">Entrar</button>
+                <button class="botao-alternar" onclick="mostrarCadastro()">Cadastrar</button>
+            </div>
+ 
+            <form id="formulario-login" class="grupo-input">
+                <h2>Entrar</h2>
+                <input type="text" class="campo-input" placeholder="Nome de usuário" required>
+                <input type="password" class="campo-input" placeholder="Senha" required>
+                <button type="submit" class="botao-enviar">Login</button>
+                <a href="#" class="esqueceu-senha">Esqueceu a senha?</a>
+            </form>
+ 
+            <form id="formulario-cadastro" class="grupo-input oculto">
+                <h2>Cadastrar</h2>
+                <input type="text" class="campo-input" placeholder="Nome de usuário" required>
+                <input type="email" class="campo-input" placeholder="E-mail" required>
+                <input type="password" class="campo-input" placeholder="Senha" required>
+                <button type="submit" class="botao-enviar">Criar Conta</button>
+            </form>
+        </div>
+    </div>
+ 
+    <script>
+        function mostrarLogin() {
+            document.getElementById("formulario-login").classList.remove("oculto");
+            document.getElementById("formulario-cadastro").classList.add("oculto");
+        }
+ 
+        function mostrarCadastro() {
+            document.getElementById("formulario-cadastro").classList.remove("oculto");
+            document.getElementById("formulario-login").classList.add("oculto");
+        }
+    </script>
+</body>
+</html>
+ 
+ 
