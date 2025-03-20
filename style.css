@@ -46,9 +46,10 @@ body {
     color: #ffe815;
 }
  
-.grupo-input {
+.grupo-input ,a {
     display: flex;
     flex-direction: column;
+    text-decoration: none;
 }
  
 .campo-input {
@@ -87,5 +88,60 @@ body {
     margin-top: 10px;
     display: inline-block;
 }
+
  
- 
+/*Casdatro de Carros*/
+
+#formulario-carro{
+    width: 100%;
+    max-width: 500px;
+    margin-left: 40px;
+
+}
+input , select,option{
+    padding: 0px;
+    margin: 20px 0px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    outline: none;
+    font-size: 16px;
+    flex-direction: column;
+}
+label,select{
+    display: block;
+    margin-bottom: 5px;
+    
+}
+
+option{
+    color: #000000;
+}
+.caixa {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.7);
+    padding:80px;
+    border-radius: 10px;
+    color: #ffe815;
+    min-height: 500px;
+    display: flex; flex-direction: column; 
+}
+h2{
+    margin-left: 2vh;
+    margin-bottom: 5px;
+}
+.cadastrar{
+    background: #ffe815;
+    border: none;
+    padding: 10px;
+    margin-top: 30px;
+    color: #000000;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: -2vh;
+    height: 50px;
+    width: 300px;
+}

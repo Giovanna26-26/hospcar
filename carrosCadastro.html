@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro Veicular</title>
+    <style>
+        #body{
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="caixa">
+        <form id="formulario-carro" >
+            <h2>Cadastro Veicular</h2>
+            <input type="text" class="input" placeholder="Placa" required>
+            <input type="text" class="input" placeholder="Chassi" required>
+            <input type="text" class="input" placeholder="Marca" required>
+            <input type="text" class="input" placeholder="Modelo" required>
+            <input type="text" class="input" placeholder="Cor" required>
+
+            <label for="tipo-veiculo">Tipo de Veículo:</label>
+            <select id="tipo-veiculo" name="tipo-veiculo" required>
+                <option value="">Selecione...</option>
+                <option value="carro">Carro</option>
+                <option value="moto">Moto</option>
+            </select>
+            <button type="submit" class="cadastrar">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
