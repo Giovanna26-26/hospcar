@@ -162,22 +162,21 @@ label {
 
 /* RESPONSIVIDADE */
 
-/* 📱 Para celulares pequenos (até 480px) */
 @media (max-width: 480px) {
     body {
         margin: 0;
         padding: 0;
-        height: 100vh; /* Preenche toda a altura da tela */
+        height: 100vh;
         display: flex;
-        justify-content: flex-start; /* Garante que o conteúdo comece do topo */
-        align-items: flex-start; /* Garante que o conteúdo fique no topo */
+        justify-content: flex-start; /* Garante que começa do topo */
+        align-items: flex-start; /* Garante que começa do topo */
     }
 
     .caixa {
         padding: 20px;
-        height: 100vh; /* Agora a caixa ocupa 100% da altura da tela */
-        min-height: 100vh;
-        margin-top: 0; /* Garante que não haja margem superior */
+        height: 100vh; /* Preenche toda a tela */
+        margin-top: 0; /* Remove qualquer margem */
+        min-height: 100vh; /* Garantir que ocupa 100vh */
     }
 
     .cadastrar {
@@ -190,24 +189,34 @@ label {
     }
 }
 
-
-    .cadastrar {
-        font-size: 14px;
-        padding: 12px;
-    }
-
-    input, select {
-        font-size: 14px;
-    }
-
-
-/* 📲 Para tablets e celulares grandes (481px a 768px) */
+/* 📲 Para celulares grandes e tablets pequenos (481px a 768px) */
 @media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
     .caixa {
         padding: 40px;
-        min-height: 500px;
+        min-height: 100vh; /* Garantir que a caixa ocupe toda a altura da tela */
+        height: 100vh;
+        margin-top: 0;
+    }
+
+    .cadastrar {
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    input, select {
+        font-size: 16px;
     }
 }
+
 
 /* 💻 Para notebooks médios (769px a 1024px) */
 @media (max-width: 1024px) {
