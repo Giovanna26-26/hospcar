@@ -165,9 +165,12 @@ label {
 /* 📱 Para celulares pequenos (até 480px) */
 @media (max-width: 480px) {
     .caixa {
-        padding: 30px;
-        min-height: 100vh; /* 🔥 Ajusta a altura para ocupar toda a tela */
-        height: 100vh; /* Garante que ocupe 100% da altura da tela */
+        
+            padding: 20px;
+            height: 100vh; /* 🔥 Garante que ocupe toda a altura da tela */
+            min-height: 100vh; /* Garante que não tenha altura mínima */
+            margin-top: 0; /* Garante que não haja margem superior */
+    
     }
 
     .cadastrar {
