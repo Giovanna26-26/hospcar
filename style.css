@@ -178,6 +178,7 @@ label {
         margin-top: 0; /* Remove qualquer margem */
         min-height: 100vh; /* Garantir que ocupa 100vh */
     }
+    
 
     .cadastrar {
         font-size: 14px;
@@ -195,15 +196,16 @@ label {
         padding: 0;
         height: 100vh;
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
     }
 
-    .caixa {
+    .caixa, .caixa-principal {
         padding: 40px;
         min-height: 100vh; /* A caixa ocupa toda a altura da tela */
         height: 100vh;
         margin-top: 0;
+        width: 100%; /* Ocupa toda a largura */
     }
 
     .cadastrar {
