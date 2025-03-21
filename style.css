@@ -189,8 +189,7 @@ label {
     }
 }
 
-/* 📲 Para celulares grandes e tablets pequenos (481px a 768px) */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     body {
         margin: 0;
         padding: 0;
@@ -202,7 +201,7 @@ label {
 
     .caixa {
         padding: 40px;
-        min-height: 100vh; /* Garantir que a caixa ocupe toda a altura da tela */
+        min-height: 100vh; /* A caixa ocupa toda a altura da tela */
         height: 100vh;
         margin-top: 0;
     }
