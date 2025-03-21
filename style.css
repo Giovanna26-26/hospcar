@@ -199,7 +199,7 @@ label {
     input, select {
         font-size: 14px;
     }
-}
+
 
 /* 📲 Para tablets e celulares grandes (481px a 768px) */
 @media (max-width: 768px) {
