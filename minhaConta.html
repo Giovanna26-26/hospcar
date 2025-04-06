@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Conta</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: #FFC107;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+}
+nav ul li a:hover{
+    font-weight: bold;
+}
+.icones {
+    font-size: 20px;
+    margin-left: 50px;
+    cursor: pointer;
+    margin-top: 8px;
+    gap: 15px;
+    margin-right: 10px;
+    
+    
+}
+
+.icones i {
+    font-size: 20px;
+    cursor: pointer;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2c100;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav a.active {
+  text-decoration: underline;
+}
+
+.icons span {
+  margin-left: 15px;
+  font-size: 1.2rem;
+}
+
+.main {
+  padding: 30px;
+}
+
+.section-title {
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+
+}
+
+.info h3 {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f2c100;
+  padding-bottom: 5px;
+  width: 90vh;
+  flex: 1 1 60%
+}
+
+.info p {
+  margin: 1px 0;
+  line-height: 30px;
+  font-weight: 100;
+}
+
+.profile-pic img {
+  width: 200px;
+  height:200px;
+  border-radius: 150px;
+  object-fit: cover;
+  margin-right: 80px;
+  margin-top: 120px;
+  flex-shrink: 0
+}
+
+.edit-button-container {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.edit-button {
+  background-color: #f2c100;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.edit-button:hover {
+  background-color: #d4aa00;
+}
+h2 {
+    width: fit-content;
+    border-bottom: 2px solid #FFC107;
+    padding-bottom: 5px;
+    margin: 50px 0px 80px 240px;
+    font-weight: 100;
+}
+
+    </style>
+</head>
+<body>
+        <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul>
+                <li><a href="#">Agendamentos</a></li>
+                <li><a href="meusCarros.html">Carros</a></li>
+                <li><a href="#">Minha Conta</a></li>
+            </ul>
+        </nav>
+        <div class="icones">
+            <a href="#"><img src="imagens/icons8-sino-32.png" alt="Notificação" id="sino"></a>
+            <a href="minhaConta.html"><img src="imagens/icons8-usuário-32.png" alt="Usuário" id="user"></a>
+        </div>
+    </header>
+    <main class="main">
+        <h2 class="section-title">MEU PERFIL:</h2>
+    
+        <div class="card">
+          <div class="card-content">
+            <div class="info">
+              <h3>INFORMAÇÕES PESSOAIS:</h3>
+              <p><strong>Nome:</strong></p>
+              <p><strong>RG:</strong></p>
+              <p><strong>CPF:</strong></p>
+              <p><strong>Data de nascimento:</strong></p>
+              <p><strong>CEP:</strong></p>
+              <p><strong>Rua:</strong></p>
+              <p><strong>Bairro:</strong></p>
+              <p><strong>Número:</strong></p>
+              <p><strong>Complemento:</strong></p>
+    
+              <h3>INFORMAÇÕES DE CONTATO:</h3>
+              <p><strong>Telefone:</strong> <span class="space">
+                <br>
+          
+              </span> <strong>E-mail:</strong></p>
+            </div>
+            <div class="profile-pic">
+              <img src="imagens/carro.jpg"Foto de perfil>
+            </div>
+          </div>
+          <div class="edit-button-container">
+            <button class="edit-button">EDITAR PERFIL</button>
+          </div>
+        </div>
+      </main>
+
+</body>
+</html>
