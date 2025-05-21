@@ -14,10 +14,11 @@
 
 header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    
+    align-items: center;
     background-color: #FFC107;
-    padding: 15px 30px;
+    padding: 15px 20px;
 }
 
 .logo {
@@ -29,7 +30,9 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
+    margin: 10px 0;
 }
 
 nav ul li {
@@ -41,56 +44,29 @@ nav ul li a {
     color: black;
     font-weight: 200;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     font-weight: bold;
 }
+
 .icones {
-    font-size: 20px;
-    margin-left: 50px;
-    cursor: pointer;
-    margin-top: 8px;
+    display: flex;
+    align-items: center;
     gap: 15px;
-    margin-right: 10px;
-    
-    
+    margin-top: 8px;
 }
 
-.icones i {
-    font-size: 20px;
+.icones img {
+    width: 24px;
+    height: 24px;
     cursor: pointer;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f2c100;
-  padding: 15px 30px;
-}
-
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-
-.nav a.active {
-  text-decoration: underline;
-}
-
-.icons span {
-  margin-left: 15px;
-  font-size: 1.2rem;
 }
 
 .conteudo {
-    padding: 40px;
-    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .caixa-agendamentos {
@@ -98,20 +74,25 @@ nav ul li a:hover{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
     max-width: 900px;
-    margin-top: 10px;
-   margin-left: 200px;
+    box-sizing: border-box;
 }
+
 h2 {
     width: fit-content;
     border-bottom: 2px solid #FFC107;
     padding-bottom: 5px;
-    margin: 20px 0px 20px 200px;
+    margin: 20px auto;
     font-weight: 100;
+    text-align: center;
 }
+
 .abas {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
@@ -119,13 +100,11 @@ h2 {
     background-color: black;
     color: white;
     padding: 10px 20px;
-    margin: 0px 100px 0px 100px;
     border: none;
     cursor: pointer;
     font-weight: bold;
     border-bottom: 2px solid transparent;
-    
-    
+    transition: all 0.3s ease;
 }
 
 .aba.ativa {
@@ -134,7 +113,7 @@ h2 {
 }
 
 .conteudo-agenda {
-    height: 200px;
+    min-height: 200px;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     margin: 10px 0 20px;
@@ -152,8 +131,124 @@ h2 {
     font-weight: bold;
     cursor: pointer;
     border-radius: 3px;
+    transition: background-color 0.3s;
 }
 
+.botao-novo button:hover {
+    background-color: #e0b000;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .icones {
+        margin-top: 10px;
+    }
+
+    .botao-novo {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .aba {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+    .conteudo {
+        padding: 10px;
+    }
+
+    .botao-novo button {
+        width: 100%;
+    }
+}
+@media (max-width: 1024px) {
+    /* MENU RESPONSIVO */
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .icones {
+        margin: 10px 0 0 0;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /* TÍTULOS E USUÁRIO */
+    h2 {
+        margin-left: 5%;
+    }
+
+    .usuario {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* MENU AJUSTADO PARA TELAS MENORES */
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* TABELA DE SERVIÇOS ROLÁVEL */
+    .ultimos-servicos {
+        overflow-x: auto;
+        padding: 0 10px;
+    }
+
+    .ultimos-servicos table {
+        width: 800px; /* fixa largura da tabela */
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    /* ÍCONES REDUZIDOS */
+    .icones img {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* AJUSTES EXTRAS NO MENU */
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    /* REDUÇÃO GERAL */
+    .ultimos-servicos table {
+        font-size: 12px;
+    }
+
+    .ultimos-servicos th,
+    .ultimos-servicos td {
+        padding: 6px;
+    }
+}
 </style>
 </head>
 <body>

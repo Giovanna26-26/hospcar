@@ -5,134 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Conta2</title>
     <style>
-        body {
+   * {
+    box-sizing: border-box;
+  }
+
+  body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-}
+  }
 
-header {
+  header {
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+    flex-wrap: wrap;
     background-color: #FFC107;
     padding: 15px 30px;
-}
+  }
 
-.logo {
+  .logo {
     font-size: 24px;
     font-weight: bold;
-}
+  }
 
-nav ul {
+  nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
     display: flex;
     gap: 20px;
-}
+  }
 
-nav ul li {
+  nav ul li {
     display: inline;
-}
+  }
 
-nav ul li a {
+  nav ul li a {
     text-decoration: none;
     color: black;
     font-weight: 200;
-}
-nav ul li a:hover{
+  }
+
+  nav ul li a:hover {
     font-weight: bold;
-}
-.icones {
-    font-size: 20px;
-    margin-left: 50px;
-    cursor: pointer;
-    margin-top: 8px;
+  }
+
+  .icones {
+    display: flex;
     gap: 15px;
-    margin-right: 10px;
-    
-    
-}
+    align-items: center;
+  }
 
-.icones i {
-    font-size: 20px;
-    cursor: pointer;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f2c100;
-  padding: 15px 30px;
-}
+  main.content {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-}
-
-.nav a.active {
-  text-decoration: underline;
-}
-
-.icons span {
-  margin-left: 15px;
-  font-size: 1.2rem;
-}
-.content {
-    padding: 40px;
-}
-
-.content h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.history-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-left: 100px;
-}
-
-.filters {
-    text-align: right;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-    
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-th {
-    background-color: #f9f9f9;
-}
-h2 {
+  h2 {
     width: fit-content;
     border-bottom: 2px solid #FFC107;
     padding-bottom: 5px;
-    margin: 50px 0px 80px 100px;
+    margin: 50px 0 40px 0;
     font-weight: 100;
-}
+  }
+
+  .history-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow-x: auto; /* permite scroll horizontal */
+  }
+
+  .filters {
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    min-width: 700px; /* força largura mínima para tabela */
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  th {
+    background-color: #f9f9f9;
+  }
+
+  /* Responsividade */
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    nav ul li a {
+      font-weight: 500;
+      font-size: 1.1rem;
+    }
+
+    main.content {
+      padding: 20px 10px;
+      margin: 0 10px;
+    }
+
+    h2 {
+      margin: 30px 0 25px 0;
+    }
+
+    .filters {
+      text-align: center;
+    }
+
+    table {
+      font-size: 12px;
+      min-width: unset;
+      width: 100%;
+    }
+
+    th, td {
+      white-space: normal;
+      word-wrap: break-word;
+      padding: 8px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    nav ul li a {
+      font-size: 1rem;
+    }
+
+    .icones img {
+      width: 24px;
+      height: 24px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -170,7 +197,7 @@ h2 {
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- Linhas de histórico aqui -->
+   
                     </tbody>
                 </table>
             </div>

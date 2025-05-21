@@ -5,104 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Veículo</title>
     <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-header {
-    display: flex;
-    justify-content: space-between;
-    background-color: #FFC107;
-    padding: 15px 30px;
-}
-
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 200;
-}
-nav ul li a:hover{
-    font-weight: bold;
-}
-.icones {
-    font-size: 20px;
-    margin-left: 50px;
-    cursor: pointer;
-    margin-top: 8px;
-    gap: 15px;
-    margin-right: 10px;
-    
-    
-}
-
-.icones i {
-    font-size: 20px;
-    cursor: pointer;
-}
-h2 {
-    width: fit-content;
-    border-bottom: 2px solid #FFC107;
-    padding-bottom: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    font-weight: 100;
-    text-align: center;
-}
-.caixa{
-    background-color:rgba(255, 255, 255, 0.308) ;
-    width: 500px;
-    height: 430px;
-    display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    align-items: center;
-}
-input{
-    margin: 10px 0 10px 65px;
-    width: 60% !important; 
-     padding: 12px;
-     background: transparent;
-     border: none;
-     border-bottom: 2px solid #FFC107;
-     color: #000000;
-     outline: none;
-     font-size: 16px;
-     align-items: center;
+          body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
     }
-    .cadastrar{
-    background: #FFC107;
-     border: none;
-     padding: 10px;
-     margin-top: 15px;
-     color: #000000;
-     font-size: 18px;
-     cursor: pointer;
-     border-radius: 5px;
-     
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #FFC107;
+      padding: 15px 30px;
+      flex-wrap: wrap;
     }
-    a{
-        text-decoration: none;
-        color: #000000;
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 200;
+    }
+
+    nav ul li a:hover {
+      font-weight: bold;
+    }
+
+    .icones {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .icones img {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    h2 {
+      width: fit-content;
+      border-bottom: 2px solid #FFC107;
+      padding-bottom: 5px;
+      margin: 20px auto;
+      font-weight: 100;
+      text-align: center;
+    }
+
+    .caixa {
+      background-color: rgba(255, 255, 255, 0.308);
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto 40px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      margin: 10px 0;
+      width: 80%;
+      padding: 12px;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #FFC107;
+      color: #000;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .cadastrar {
+      background: #FFC107;
+      border: none;
+      padding: 12px 25px;
+      margin-top: 15px;
+      color: #000000;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .cadastrar:hover {
+      background-color: #e0b000;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+      }
+
+      .icones {
+        margin-top: 10px;
+        justify-content: center;
+      }
+
+      .caixa {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      input {
+        width: 100%;
+      }
+
+      .cadastrar {
+        width: 100%;
+      }
     }
     </style>
 </head>

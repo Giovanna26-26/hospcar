@@ -181,6 +181,201 @@ a{
     font-weight: bold;
     margin: 0;
 }
+/* RESPONSIVIDADE */
+@media (max-width: 1024px) {
+    .container-carros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartao-carro {
+        width: 90%;
+    }
+
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .acoes {
+        width: 90%;
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .ultimos-servicos table {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    h2 {
+        margin-left: 5%;
+    }
+
+    .usuario {
+        margin-left: 5%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .icones {
+        margin: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .usuario p {
+        font-size: 16px;
+    }
+
+    .cartao-carro {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cartao-carro p {
+        text-align: center;
+    }
+
+    .status {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .acoes img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .acoes p {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .ultimos-servicos table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 5px;
+    }
+}
+@media (max-width: 1024px) {
+    /* MENU RESPONSIVO */
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .icones {
+        margin: 10px 0 0 0;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /* TÍTULOS E USUÁRIO */
+    h2 {
+        margin-left: 5%;
+    }
+
+    .usuario {
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* MENU AJUSTADO PARA TELAS MENORES */
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* TABELA DE SERVIÇOS ROLÁVEL */
+    .ultimos-servicos {
+        overflow-x: auto;
+        padding: 0 10px;
+    }
+
+    .ultimos-servicos table {
+        width: 800px; /* fixa largura da tabela */
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    /* ÍCONES REDUZIDOS */
+    .icones img {
+        width: 24px;
+        height: 24px;
+    }
+
+    /* AJUSTES EXTRAS NO MENU */
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    /* REDUÇÃO GERAL */
+    .ultimos-servicos table {
+        font-size: 12px;
+    }
+
+    .ultimos-servicos th,
+    .ultimos-servicos td {
+        padding: 6px;
+    }
+}
+.acoes {
+    width: 200px;
+    height: 120px; /* leve aumento para caber tudo bem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.acoes img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
 
     </style>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
