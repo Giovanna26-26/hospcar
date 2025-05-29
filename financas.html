@@ -5,67 +5,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finanças</title>
     <style>
-                body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+   body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    
-    background-color: #FFC107;
-    padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFC107;
+  padding: 15px 30px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li {
-    display: inline;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 200;
-}
-nav ul li a:hover{
-    font-weight: bold;
-}
-.icones {
-    font-size: 20px;
-    margin-left: 50px;
-    cursor: pointer;
-    margin-top: 8px;
-    gap: 15px;
-    margin-right: 10px;
-    
-    
+  text-decoration: none;
+  color: black;
+  font-weight: 200;
 }
 
-.icones i {
-    font-size: 20px;
-    cursor: pointer;
+nav ul li a:hover {
+  font-weight: bold;
 }
-        h2 {
-    width: fit-content;
-    border-bottom: 2px solid #FFC107;
-    padding-bottom: 5px;
-    margin: 50px 0px 80px 180px;
-    font-weight: 100;
+
+.icones {
+  display: flex;
+  gap: 15px;
+  align-items: center;
 }
+
+h2 {
+  width: fit-content;
+  border-bottom: 2px solid #FFC107;
+  padding-bottom: 5px;
+  margin: 50px auto 40px auto;
+  font-weight: 100;
+  text-align: center;
+}
+
+.orcamento-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #FFC107;
+  font-weight: bold;
+}
+
+.itens-orcamento th {
+  background-color: #333;
+  color: white;
+}
+
+.total {
+  font-weight: bold;
+  background-color: #f2f2f2;
+}
+
+.garantias {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #333;
+}
+
+.garantias h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .icones {
+    justify-content: center;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 30px auto;
+  }
+
+  .orcamento-container {
+    padding: 15px;
+  }
+
+  table {
+    font-size: 13px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  input,
+  select {
+    font-size: 14px;
+  }
+}
+
+@media print {
+  body {
+    background-color: white;
+    padding: 0;
+  }
+
+  .orcamento-container {
+    box-shadow: none;
+    padding: 0;
+  }
+}
+
 
     </style>
 </head>
@@ -88,6 +190,190 @@ nav ul li a:hover{
     </header>
     <section>
         <h2>Dashboard</h2>
+          <div class="orcamento-container">
+        
+        <table class="dados-cliente">
+            <tr>
+                <th>CLIENTE</th>
+                <th>REGISTRO Nº</th>
+                <th>DATA</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="cliente" placeholder="Nome do cliente" style="width: 100%; border: none;"></td>
+                <td><input type="text" id="registro" placeholder="Nº registro" style="width: 100%; border: none;"></td>
+                <td><input type="date" id="data" style="width: 100%; border: none;"></td>
+            </tr>
+        </table>
+        
+        <table class="dados-cliente">
+            <tr>
+                <th>CPF/CNPJ</th>
+                <th>TELEFONE</th>
+                <th>E-MAIL</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="cpf-cnpj" placeholder="CPF/CNPJ" style="width: 100%; border: none;"></td>
+                <td><input type="tel" id="telefone" placeholder="Telefone" style="width: 100%; border: none;"></td>
+                <td><input type="email" id="email" placeholder="E-mail" style="width: 100%; border: none;"></td>
+            </tr>
+        </table>
+        
+        <table class="dados-cliente">
+            <tr>
+                <th>ENDEREÇO - Nº</th>
+                <th>CARRO</th>
+                <th>PLACA</th>
+                <th>ANO/MOTOR</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="endereco" placeholder="Endereço" style="width: 100%; border: none;"></td>
+                <td><input type="text" id="carro" placeholder="Modelo do carro" style="width: 100%; border: none;"></td>
+                <td><input type="text" id="placa" placeholder="Placa" style="width: 100%; border: none;"></td>
+                <td><input type="text" id="ano-motor" placeholder="Ano/Motor" style="width: 100%; border: none;"></td>
+            </tr>
+        </table>
+        
+        <table class="itens-orcamento">
+            <thead>
+                <tr>
+                    <th>DESCRIÇÃO</th>
+                    <th>QTD</th>
+                    <th>PREÇO UNI</th>
+                    <th>VALOR FINAL</th>
+                </tr>
+            </thead>
+            <tbody id="itens">
+                <!-- Itens serão adicionados dinamicamente -->
+                <tr>
+                    <td><input type="text" class="descricao" placeholder="Descrição do item" style="width: 100%; border: none;"></td>
+                    <td><input type="number" class="quantidade" min="1" value="1" style="width: 50px; border: none;"></td>
+                    <td><input type="number" class="preco" min="0" step="0.01" placeholder="0.00" style="width: 80px; border: none;"></td>
+                    <td class="valor-final">R$ 0,00</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <button id="adicionar-item" style="padding: 8px 15px; background-color:  #FFC107; color: rgb(0, 0, 0); border: none; border-radius: 4px; cursor: pointer;">Adicionar Item</button>
+        
+        <table class="resumo">
+            <tr>
+                <td rowspan="2" style="vertical-align: middle; width: 60%;">
+                    <p><strong>A FAMILIA AGRADECE, OBRIGADO PELA PREFERÊNCIA!</strong></p>
+                    <div>
+                        <label for="forma-pagamento">FORMA DE PAGAMENTO:</label>
+                        <select id="forma-pagamento" style="margin-left: 10px;">
+                            <option value="dinheiro">Dinheiro</option>
+                            <option value="cartao-debito">Cartão de Débito</option>
+                            <option value="cartao-credito">Cartão de Crédito</option>
+                            <option value="pix">PIX</option>
+                            <option value="transferencia">Transferência Bancária</option>
+                        </select>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <label for="observacoes">OBS:</label>
+                        <input type="text" id="observacoes" placeholder="Observações" style="width: 70%; margin-left: 10px; border: none; border-bottom: 1px solid #ddd;">
+                    </div>
+                </td>
+                <th>SUBTOTAL</th>
+                <td id="subtotal">R$ 0,00</td>
+            </tr>
+            <tr>
+                <th>DESCONTOS</th>
+                <td>
+                    <input type="number" id="descontos" min="0" step="0.01" value="0" style="width: 80px; border: none; text-align: right;" onchange="calcularTotal()">
+                </td>
+            </tr>
+            <tr class="total">
+                <td colspan="2">TOTAL</td>
+                <td id="total">R$ 0,00</td>
+            </tr>
+        </table>
+        
+        
+        <div class="footer">
+            <button id="enviar-orcamento" style="padding: 10px 20px; background-color:  #FFC107; color: black; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;">Enviar Orçamento</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adicionar novo item
+            document.getElementById('adicionar-item').addEventListener('click', function() {
+                const tbody = document.getElementById('itens');
+                const newRow = document.createElement('tr');
+                
+                newRow.innerHTML = `
+                    <td><input type="text" class="descricao" placeholder="Descrição do item" style="width: 100%; border: none;"></td>
+                    <td><input type="number" class="quantidade" min="1" value="1" style="width: 50px; border: none;"></td>
+                    <td><input type="number" class="preco" min="0" step="0.01" placeholder="0.00" style="width: 80px; border: none;"></td>
+                    <td class="valor-final">R$ 0,00</td>
+                `;
+                
+                tbody.appendChild(newRow);
+                
+                // Adicionar eventos aos novos inputs
+                const inputs = newRow.querySelectorAll('input');
+                inputs.forEach(input => {
+                    if (input.classList.contains('quantidade')) {
+                        input.addEventListener('change', calcularValorFinal);
+                    } else if (input.classList.contains('preco')) {
+                        input.addEventListener('change', calcularValorFinal);
+                    }
+                });
+            });
+            
+            // Calcular valor final quando quantidade ou preço mudar
+            function calcularValorFinal(event) {
+                const row = event.target.closest('tr');
+                const quantidade = parseFloat(row.querySelector('.quantidade').value) || 0;
+                const preco = parseFloat(row.querySelector('.preco').value) || 0;
+                const valorFinal = quantidade * preco;
+                
+                row.querySelector('.valor-final').textContent = 'R$ ' + valorFinal.toFixed(2).replace('.', ',');
+                
+                calcularSubtotal();
+            }
+            
+            // Calcular subtotal
+            function calcularSubtotal() {
+                let subtotal = 0;
+                document.querySelectorAll('.valor-final').forEach(cell => {
+                    const valor = parseFloat(cell.textContent.replace('R$ ', '').replace(',', '.')) || 0;
+                    subtotal += valor;
+                });
+                
+                document.getElementById('subtotal').textContent = 'R$ ' + subtotal.toFixed(2).replace('.', ',');
+                calcularTotal();
+            }
+            
+            // Calcular total com descontos
+            function calcularTotal() {
+                const subtotal = parseFloat(document.getElementById('subtotal').textContent.replace('R$ ', '').replace(',', '.')) || 0;
+                const descontos = parseFloat(document.getElementById('descontos').value) || 0;
+                const total = subtotal - descontos;
+                
+                document.getElementById('total').textContent = 'R$ ' + total.toFixed(2).replace('.', ',');
+            }
+            
+            // Adicionar eventos aos inputs existentes
+            document.querySelectorAll('.quantidade, .preco').forEach(input => {
+                input.addEventListener('change', calcularValorFinal);
+            });
+            
+            document.getElementById('descontos').addEventListener('change', calcularTotal);
+            
+            // Botão enviar orçamento
+            document.getElementById('enviar-orcamento').addEventListener('click', function() {
+                alert('Orçamento enviado com sucesso!');
+                // Aqui você pode adicionar código para enviar por e-mail ou WhatsApp
+            });
+            
+            // Botão imprimir orçamento
+            document.getElementById('imprimir-orcamento').addEventListener('click', function() {
+                window.print();
+            });
+        });
+    </script>
     </section>
 </body>
 </html>
